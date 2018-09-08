@@ -8,55 +8,76 @@
   </head>
   <body>
     <form id="new-search-form">
-      <div class="form-wraper">
-        <div id="form-item">
-          <select id="category">
-            <option value="flight">Flight</option>
-            <option value="hotel">Hotel</option>
-            <option value="flightandhotel">Flight and Hotel</option>
-            <option value="car">Car Hire</option>
-            <option value="holiday">Holiday Package</option>
+      <div class ="form-wraper">
+        <div class ="form-item">
+          <select id="classSelection">
+            <option value="" disabled selected>Cabin Class</option>
+            <option value="economy">Economy</option>
+            <option value="premimum economy">Premium Economy</option>
+            <option value="business">Business</option>
+            <option value="first class">First Class</option>
           </select>
           <br><br>
         </div>
 
-        <div class="form-item" id="flight-form-wraper">
-          <input type="radio" name="tripTypeSelector" value="oneWay"> One Way
-          <input type="radio" name="tripTypeSelector" value="return"> Return
+        <div class="form-item">
+          <label for="flightType" id="flightType"></label>
+          <input type="radio" value="one way" > One Way
+          <input type="radio" value="return" > Return
         </div>
-
-        <div class="form-item" id="range-selector">
-          <p>Price Range:</p>
-          0
-          <input type="range" list="tickmarks">
-            <datalist id="tickmarks">
-              <option value="0" label="0">
-              <option value="20">
-              <option value="40">
-              <option value="60">
-              <option value="80">
-              <option value="100" label="1000">
-            </datalist>
-          1000
-          <br><br>
-        </div>
+        <br>
 
         <div class="form-item">
-          <label for="destinations" id="destinations"></label>
-            From:<input type="text" name="from">
-            To: <input type="text" name="to">
-          <br>
-          <label for="flight-date" id="flight-date"></label>
-            Depart:<input type="date" name="depart">
-            Return:<input type="date" name="return">
+          <label for="destination" class="primary">From:</label>
+          <input type="text" id="destinationFrom"/>
+
+          <label for="destination" class="primary">To:</label>
+          <input type="text" id="destinationTo"/>
+        </div>
+        <br>
+
+        <div class="form-item">
+          <label for="departure" class="primary">Depart:</label>
+          <input type="date" id="departure" />
+
+          <label for="return" class="primary">Return:</label>
+          <input type="date" id="return"/>
+        </div>
+        <br>
+
+        <div class="form-item">
+          <label for="priceRange">Price Range</label>
+          0
+          <input type="range" id="start" list="tickmarks" min="0" max="1000"/>
+          <datalist id="tickmarks">
+            <option value="0"    label="0">
+            <option value="200">
+            <option value="400">
+            <option value="600">
+            <option value="800">
+            <option value="1000" label="1000">
+          </datalist>
+          1000
         </div>
 
         <div class="form-item" id="details">
           <p>Provide your details for future promotions:</p>
-            First name:<input type="text" name="fname">
-            Last name: <input type="text" name="lname">
-            Phone number:<input type="tel" name="usrtel">
-            E-mail: <input type="email" name="email">
+          <label for="title" class="primary">Title: </label>
+            <select id="titleSelection">
+              <option value="" disabled selected></option>
+              <option value="Mr">Mr</option>
+              <option value="Ms">Ms</option>
+              <option value="Mrs">Mrs</option>
+              <option value="Dr">Dr</option>
+            </select>
+          <label for="first name" class="primary">First Name: </label>
+          <input type="text" id="firstname" />
+          <label for="last name" class="primary">Last Name: </label>
+          <input type="text" id="lastname" />
+          <label for="tel" class="primary">Telephone: </label>
+          <input type="tel" id="telephone" name="usrtel" />
+          <label for="email" class="primary">E-mail: </label>
+          <input type="email" id="email" name="email"/>
         </div>
       </div>
       <br>
