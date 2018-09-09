@@ -1,0 +1,27 @@
+body {
+  font-family: Palatino;
+
+}
+
+#form-wrapper{
+  display: flex;
+}
+
+/* .form-item{
+  padding: 10px;
+}
+
+#reading-list{
+  padding: 10px;
+  display: flex;
+  align-items: left;
+} */
+
+.result-box{
+  border: solid 3px red;
+  margin: 10px;
+  border-radius: 10px;
+  /* border: solid 1px #4A7D90; */
+  background-color: #88B2CA;
+  padding: 10px;
+}
