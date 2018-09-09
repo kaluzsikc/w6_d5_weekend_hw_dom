@@ -15,38 +15,35 @@
             <option value="economy">Economy</option>
             <option value="premimum economy">Premium Economy</option>
             <option value="business">Business</option>
-            <option value="first class">First Class</option>
+            <option value="first class">First</option>
           </select>
-          <br><br>
         </div>
-
-        <div class="form-item">
-          <label for="flightType" id="flightType"></label>
-          <input type="radio" value="one way" > One Way
-          <input type="radio" value="return" > Return
-        </div>
-        <br>
-
+<br>
+        <div>
+            <input type="radio" id="flightType1"
+             name="flightType" value="One way">
+            <label for="flightType1">One Way</label>
+            <input type="radio" id="flightType2"
+             name="flightType" value="Return">
+            <label for="flightType2">Return</label>
+          </div>
+<br>
         <div class="form-item">
           <label for="destination" class="primary">From:</label>
-          <input type="text" id="destinationFrom"/>
-
+          <input type="text" id="destinationFrom" placeholder="Destination"/>
           <label for="destination" class="primary">To:</label>
-          <input type="text" id="destinationTo"/>
+          <input type="text" id="destinationTo" placeholder="Destination"/>
         </div>
-        <br>
-
+<br>
         <div class="form-item">
           <label for="departure" class="primary">Depart:</label>
           <input type="date" id="departure" />
-
           <label for="return" class="primary">Return:</label>
           <input type="date" id="return"/>
         </div>
-        <br>
-
+<br>
         <div class="form-item">
-          <label for="priceRange">Price Range</label>
+          <label for="priceRange">Price Range: </label>
           0
           <input type="range" id="start" list="tickmarks" min="0" max="1000"/>
           <datalist id="tickmarks">
@@ -59,7 +56,7 @@
           </datalist>
           1000
         </div>
-
+<br>
         <div class="form-item" id="details">
           <p>Provide your details for future promotions:</p>
           <label for="title" class="primary">Title: </label>
@@ -80,7 +77,7 @@
           <input type="email" id="email" name="email"/>
         </div>
       </div>
-      <br>
+<br>
       <input type="submit" value="Search"/><br>
       <input type="submit" value="Delete All"/><br>
     </form>
